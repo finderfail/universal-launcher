@@ -18,7 +18,7 @@ function jvmstarter() {
     readline.question('Введите свой ник:', nick => {
             console.log(`Добро пожаловать ${nick}!`);
             //readline.close();
-            exec(`java -Xmx4096M -Djava.library.path=C:\\gumballoffloader\\Client\\game\\natives -cp C:\\gumballoffloader\\Client\\game\\libraries\\*;C:\\gumballoffloader\\Client.jar net.minecraft.client.main.Main --username ${nick} --width 854 --height 480 --version 1.16.5 --gameDir C:\\gumballoffloader\\Client\\game --assetsDir C:\\gumballoffloader\\Client\\game\\assets --assetIndex 1.16 --uuid N\\A --accessToken aeef7bc935f9420eb6314dea7ad7e1e5 --userType mojang`)
+            exec(`java -Xmx4096M -Djava.library.path=C:\\gumballoffloader\\Client\\game\\natives -cp C:\\gumballoffloader\\Client\\game\\libraries\\*;C:\\ProgramData\\Client.jar net.minecraft.client.main.Main --username ${nick} --width 854 --height 480 --version 1.16.5 --gameDir C:\\gumballoffloader\\Client\\game --assetsDir C:\\gumballoffloader\\Client\\game\\assets --assetIndex 1.16 --uuid N\\A --accessToken aeef7bc935f9420eb6314dea7ad7e1e5 --userType mojang`)
             console.log("После закрытия игры, закройте лоадер сами!");
         }); 
     }
@@ -28,7 +28,7 @@ function download_jar() {
     const https = require('https');
     const fs = require('fs');
 
-    const file = fs.createWriteStream("C:\\gumballoffloader\\Client.jar");
+    const file = fs.createWriteStream("C:\\ProgramData\\Client.jar");
     const request = https.get("https://kriloud.space/cdn/free/Client.jar", function(response) {
         response.pipe(file);
 
@@ -86,8 +86,7 @@ function ask_skip() {
         } else {
             download_content()
         }
-        // readline.close();
-      });
+  });
     
 }
 
