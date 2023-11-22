@@ -4,6 +4,10 @@
   },
   "scripts": {
     "start": "node main.js",
-    "docs": "mkdir -p docs-out && docgen --source src --output docs-out/master.json --jsdoc jsdoc.json --custom docgen.json"
+    "docs": "mkdir -p docs-out && docgen --source src --output docs-out/master.json --jsdoc jsdoc.json --custom docgen.json",
+    "build": "esbuild build.mjs --bundle --outfile=out.js"
+  },
+  "devDependencies": {
+    "esbuild": "0.19.7"
   }
 }
