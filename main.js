@@ -52,7 +52,7 @@ function jvmstarter() {
             //readline.close();
 
         // execude java arguments in child process
-            exec(`java -Xmx4096M -Djava.library.path=C:\\gumballoffloader\\Client\\game\\natives -cp C:\\gumballoffloader\\Client\\game\\libraries\\*;C:\\ProgramData\\Client.jar net.minecraft.client.main.Main --username ${nick} --width 854 --height 480 --version 1.16.5 --gameDir C:\\gumballoffloader\\Client\\game --assetsDir C:\\gumballoffloader\\Client\\game\\assets --assetIndex 1.16 --uuid N\\A --accessToken aeef7bc935f9420eb6314dea7ad7e1e5 --userType mojang`)
+            exec(`java -Xmx4096M -Djava.library.path=C:\\gumballoffloader\\Client\\game\\natives -cp C:\\gumballoffloader\\Client\\game\\libraries\\*;D:\\Users\\Shadowmaster\\Desktop\\FORGE1165\\forg.jar cpw.mods.modlauncher.Launcher --username ${nick} --width 854 --height 480 --version 1.16.5 --gameDir C:\\gumballoffloader\\Client\\game --assetsDir C:\\gumballoffloader\\Client\\game\\assets --assetIndex 1.16 --uuid N\\A --accessToken aeef7bc935f9420eb6314dea7ad7e1e5 --userType mojang`)
             console.log("После закрытия игры, закройте лоадер сами!");
         }); 
     }
