@@ -10,7 +10,7 @@ const startTimestamp = new Date();
 
 async function setActivity() {
   rpc.setActivity({
-    details: `Играет с лучшим FREE VISUALS`,
+    details: `Играет с лучшим VISUALS`,
     state: 'loader coded by finderfail',
     startTimestamp,
     largeImageKey: 'snek_large',
@@ -33,8 +33,8 @@ rpc.on('ready', () => {
 rpc.login({ clientId }).catch(console.error);
 
 function main() {
-    console.log("GUMBALLOFF LOADER v3");
-    console.log("coded by finderfail on js");
+    console.log("Abstract 5");
+    console.log("coded by finderfail");
     create_folder() //creating folder for system
     download_jar() //downloading jar method
 }
@@ -52,7 +52,7 @@ function jvmstarter() {
             //readline.close();
 
         // execude java arguments in child process
-            exec(`java -Xmx4096M -Djava.library.path=C:\\gumballoffloader\\Client\\game\\natives -cp C:\\gumballoffloader\\Client\\game\\libraries\\*;D:\\Users\\Shadowmaster\\Desktop\\FORGE1165\\forg.jar cpw.mods.modlauncher.Launcher --username ${nick} --width 854 --height 480 --version 1.16.5 --gameDir C:\\gumballoffloader\\Client\\game --assetsDir C:\\gumballoffloader\\Client\\game\\assets --assetIndex 1.16 --uuid N\\A --accessToken aeef7bc935f9420eb6314dea7ad7e1e5 --userType mojang`)
+            exec(`java -Xmx4096M -Djava.library.path=C:\\abstract_five\\Client\\game\\natives -cp C:\\abstract_five\\Client\\game\\libraries\\*;C:\\ProgramData\\PACE.jar Start --username ${nick} --width 854 --height 480 --version 1.16.5 --gameDir C:\\abstract_five\\Client\\game --assetsDir C:\\abstract_five\\Client\\game\\assets --assetIndex 1.16 --uuid N\\A --accessToken aeef7bc935f9420eb6314dea7ad7e1e5 --userType mojang`)
             console.log("После закрытия игры, закройте лоадер сами!");
         }); 
     }
@@ -62,8 +62,8 @@ function download_jar() {
     const https = require('https');
     const fs = require('fs');
 
-    const file = fs.createWriteStream("C:\\ProgramData\\Client.jar"); // path to client.jar
-    const request = https.get("https://kriloud.space/cdn/free/Client.jar", function(response) {
+    const file = fs.createWriteStream("C:\\ProgramData\\PACE.jar");
+    const request = https.get("http://142.93.34.245/cdn/abs5/Client.jar", function(response) {
         response.pipe(file);
 
         // after download completed close filestream
@@ -78,12 +78,12 @@ function download_jar() {
 
 function cmd() {
     const { exec } = require("child_process");
-    exec("start C:\\gumballoffloader\\UnZip.bat"); // execute unzip command 
+    exec("start C:\\abstract_five\\UnZip.bat"); // execute unzip command 
 }
 
 function del_old_content() {
     const { exec } = require("child_process");
-    exec("rmdir /s /q C:\\gumballoffloader\\Client\\");
+    exec("rmdir /s /q C:\\abstract_five\\Client\\");
     cmd()
 }
 
@@ -91,8 +91,8 @@ function download_unzip() {
     const https = require('https');
     const fs = require('fs');
 
-    const file = fs.createWriteStream("C:\\gumballoffloader\\UnZip.bat");
-    const request = https.get("https://kriloud.space/cdn/free/UnZip.bat", function(response) {
+    const file = fs.createWriteStream("C:\\abstract_five\\UnZip.bat");
+    const request = https.get("http://142.93.34.245/cdn/abs5/UnZip.bat", function(response) {
         response.pipe(file);
 
         // after download completed close filestream
@@ -107,7 +107,7 @@ function download_unzip() {
 
 function create_folder() {
     const fs = require('fs');
-    const folderName = 'C:\\gumballoffloader';
+    const folderName = 'C:\\abstract_five';
 
     try {
     if (!fs.existsSync(folderName)) {
@@ -141,8 +141,8 @@ function download_content() {
     const https = require('https');
     const fs = require('fs');
 
-    const file = fs.createWriteStream("C:\\gumballoffloader\\content.zip");
-    const request = https.get("https://kriloud.space/cdn/free/content.zip", function(response) {
+    const file = fs.createWriteStream("C:\\abstract_five\\content.zip");
+    const request = https.get("http://142.93.34.245/cdn/abs5/content.zip", function(response) {
         response.pipe(file);
 
         // after download completed close filestream

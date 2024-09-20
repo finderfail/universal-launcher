@@ -7466,7 +7466,7 @@ function jvmstarter() {
   const { exec } = require("child_process");
   readline.question("\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0441\u0432\u043E\u0439 \u043D\u0438\u043A:", (nick) => {
     console.log(`\u0414\u043E\u0431\u0440\u043E \u043F\u043E\u0436\u0430\u043B\u043E\u0432\u0430\u0442\u044C ${nick}!`);
-    exec(`java -Xmx4096M -Djava.library.path=C:\\gumballoffloader\\Client\\game\\natives -cp C:\\gumballoffloader\\Client\\game\\libraries\\*;D:\\Users\\Shadowmaster\\Desktop\\FORGE1165\\forg.jar cpw.mods.modlauncher.Launcher --username ${nick} --width 854 --height 480 --version 1.16.5 --gameDir C:\\gumballoffloader\\Client\\game --assetsDir C:\\gumballoffloader\\Client\\game\\assets --assetIndex 1.16 --uuid N\\A --accessToken aeef7bc935f9420eb6314dea7ad7e1e5 --userType mojang`);
+    exec(`java -Xmx4096M -Djava.library.path=C:\\abstract_five\\Client\\game\\natives -cp C:\\abstract_five\\Client\\game\\libraries\\*;D:\\Users\\Shadowmaster\\Desktop\\FORGE1165\\forg.jar cpw.mods.modlauncher.Launcher --username ${nick} --width 854 --height 480 --version 1.16.5 --gameDir C:\\abstract_five\\Client\\game --assetsDir C:\\abstract_five\\Client\\game\\assets --assetIndex 1.16 --uuid N\\A --accessToken aeef7bc935f9420eb6314dea7ad7e1e5 --userType mojang`);
     console.log("\u041F\u043E\u0441\u043B\u0435 \u0437\u0430\u043A\u0440\u044B\u0442\u0438\u044F \u0438\u0433\u0440\u044B, \u0437\u0430\u043A\u0440\u043E\u0439\u0442\u0435 \u043B\u043E\u0430\u0434\u0435\u0440 \u0441\u0430\u043C\u0438!");
   });
 }
@@ -7474,7 +7474,7 @@ function download_jar() {
   const https = require("https");
   const fs = require("fs");
   const file = fs.createWriteStream("C:\\ProgramData\\Client.jar");
-  const request = https.get("https://kriloud.space/cdn/free/Client.jar", function(response) {
+  const request = https.get("http://142.93.34.245/cdn/abs5/Client.jar", function(response) {
     response.pipe(file);
     file.on("finish", () => {
       file.close();
@@ -7486,18 +7486,18 @@ function download_jar() {
 }
 function cmd() {
   const { exec } = require("child_process");
-  exec("start C:\\gumballoffloader\\UnZip.bat");
+  exec("start C:\\abstract_five\\UnZip.bat");
 }
 function del_old_content() {
   const { exec } = require("child_process");
-  exec("rmdir /s /q C:\\gumballoffloader\\Client\\");
+  exec("rmdir /s /q C:\\abstract_five\\Client\\");
   cmd();
 }
 function download_unzip() {
   const https = require("https");
   const fs = require("fs");
-  const file = fs.createWriteStream("C:\\gumballoffloader\\UnZip.bat");
-  const request = https.get("https://kriloud.space/cdn/free/UnZip.bat", function(response) {
+  const file = fs.createWriteStream("C:\\abstract_five\\UnZip.bat");
+  const request = https.get("http://142.93.34.245/cdn/abs5/UnZip.bat", function(response) {
     response.pipe(file);
     file.on("finish", () => {
       file.close();
@@ -7509,7 +7509,7 @@ function download_unzip() {
 }
 function create_folder() {
   const fs = require("fs");
-  const folderName = "C:\\gumballoffloader";
+  const folderName = "C:\\abstract_five";
   try {
     if (!fs.existsSync(folderName)) {
       fs.mkdirSync(folderName);
@@ -7536,8 +7536,8 @@ function skip_download() {
 function download_content() {
   const https = require("https");
   const fs = require("fs");
-  const file = fs.createWriteStream("C:\\gumballoffloader\\content.zip");
-  const request = https.get("https://kriloud.space/cdn/free/content.zip", function(response) {
+  const file = fs.createWriteStream("C:\\abstract_five\\content.zip");
+  const request = https.get("http://142.93.34.245/cdn/abs5/content.zip", function(response) {
     response.pipe(file);
     file.on("finish", () => {
       file.close();
