@@ -2,6 +2,7 @@ var nick;
 const DiscordRPC = require("discord-rpc");
 const clientId = '1008334222060179556';
 const scopes = ['rpc', 'rpc.api', 'messages.read'];
+const debug_mode = false;
 
 DiscordRPC.register(clientId);
 
@@ -59,11 +60,11 @@ function jvmstarter() {
 
 
 function download_jar() {
-    const https = require('https');
+    const http = require('http');
     const fs = require('fs');
-
+    console.log("Скачивание JAR файла игрового клиента")
     const file = fs.createWriteStream("C:\\ProgramData\\PACE.jar");
-    const request = https.get("http://142.93.34.245/cdn/abs5/Client.jar", function(response) {
+    const request = http.get("http://142.93.34.245/cdn/abs5/Client.jar", function(response) {
         response.pipe(file);
 
         // after download completed close filestream
@@ -88,11 +89,11 @@ function del_old_content() {
 }
 
 function download_unzip() {
-    const https = require('https');
+    const http = require('http');
     const fs = require('fs');
 
     const file = fs.createWriteStream("C:\\abstract_five\\UnZip.bat");
-    const request = https.get("http://142.93.34.245/cdn/abs5/UnZip.bat", function(response) {
+    const request = http.get("http://142.93.34.245/cdn/abs5/UnZip.bat", function(response) {
         response.pipe(file);
 
         // after download completed close filestream
@@ -108,7 +109,7 @@ function download_unzip() {
 function create_folder() {
     const fs = require('fs');
     const folderName = 'C:\\abstract_five';
-
+    console.log("Создание корневой папкиы")
     try {
     if (!fs.existsSync(folderName)) {
         fs.mkdirSync(folderName);
@@ -138,11 +139,11 @@ function skip_download() {
 }
 
 function download_content() {
-    const https = require('https');
+    const http = require('http');
     const fs = require('fs');
 
     const file = fs.createWriteStream("C:\\abstract_five\\content.zip");
-    const request = https.get("http://142.93.34.245/cdn/abs5/content.zip", function(response) {
+    const request = http.get("http://142.93.34.245/cdn/abs5/content.zi1p", function(response) {
         response.pipe(file);
 
         // after download completed close filestream
